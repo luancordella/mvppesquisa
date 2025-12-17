@@ -322,8 +322,8 @@
 
         /* Card principal */
         .main-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(40px);
+            /* Alterado para branco puro sólido para fundir com o logo */
+            background: #FFFFFF; 
             border-radius: var(--border-radius);
             box-shadow: var(--shadow-soft);
             border: 1px solid rgba(0, 155, 164, 0.06);
@@ -348,7 +348,8 @@
             text-align: center;
             padding: 55px 50px 45px;
             position: relative;
-            background: linear-gradient(180deg, rgba(0, 155, 164, 0.02) 0%, transparent 100%);
+            /* Fundo removido para garantir que seja o branco puro do main-card */
+            background: transparent; 
         }
 
         .logo-wrapper {
@@ -374,7 +375,8 @@
             max-width: 180px;
             height: auto;
             position: relative;
-            filter: drop-shadow(0 8px 25px rgba(0, 155, 164, 0.12));
+            /* Removida sombra pesada para evitar contraste com fundo branco */
+            filter: drop-shadow(0 4px 12px rgba(0, 155, 164, 0.08));
             transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -658,12 +660,17 @@
         .scale-wrapper {
             display: flex;
             flex-direction: column;
+            width: 100%;
         }
 
         .scale-container {
             display: flex;
             align-items: center;
-            gap: 10px;
+            /* AUMENTADO: Gap e Space Between para espaçar */
+            justify-content: space-between;
+            gap: 20px; 
+            width: 100%;
+            max-width: 420px; /* Levemente aumentado para acomodar o espaçamento */
         }
 
         .scale-option {
@@ -761,7 +768,7 @@
             display: flex;
             justify-content: space-between;
             width: 100%;
-            max-width: 290px;
+            max-width: 420px; /* Ajustado para acompanhar o container */
             margin-top: 8px;
         }
 
@@ -898,7 +905,7 @@
             }
 
             .scale-container {
-                gap: 6px;
+                gap: 8px; /* Gap menor em mobile */
             }
 
             .scale-option label {
